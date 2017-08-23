@@ -65,6 +65,7 @@
     <Compile Include="Direccion.cs">
       <DependentUpon>EjemploEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="direccionMetadata.cs" />
     <Compile Include="EjemploEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EjemploEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FabricaMetadata.cs" />
     <Compile Include="Fabricas.cs">
       <DependentUpon>EjemploEntities.tt</DependentUpon>
     </Compile>
@@ -90,6 +92,7 @@
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>EjemploEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="Validations.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="EjemploEntities.edmx">

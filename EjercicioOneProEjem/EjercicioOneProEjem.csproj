@@ -198,11 +198,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ArticuloController.cs" />
     <Compile Include="Controllers\ClientesController.cs" />
+    <Compile Include="Controllers\DetallePedidoesController.cs" />
     <Compile Include="Controllers\DireccionsController.cs" />
     <Compile Include="Controllers\FabricasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PedidoController.cs" />
+    <Compile Include="Controllers\PedidoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -287,14 +289,21 @@
     <Content Include="Views\Articulo\Create.cshtml" />
     <Content Include="Views\Articulo\Edit.cshtml" />
     <Content Include="Views\Articulo\Delete.cshtml" />
-    <Content Include="Views\Pedido\Create.cshtml" />
-    <Content Include="Views\Pedido\Index.cshtml" />
-    <Content Include="Views\Pedido\Edit.cshtml" />
     <Content Include="Views\Direccions\Create.cshtml" />
     <Content Include="Views\Direccions\Delete.cshtml" />
     <Content Include="Views\Direccions\Details.cshtml" />
     <Content Include="Views\Direccions\Edit.cshtml" />
     <Content Include="Views\Direccions\Index.cshtml" />
+    <Content Include="Views\Pedidoes\Create.cshtml" />
+    <Content Include="Views\Pedidoes\Delete.cshtml" />
+    <Content Include="Views\Pedidoes\Details.cshtml" />
+    <Content Include="Views\Pedidoes\Edit.cshtml" />
+    <Content Include="Views\Pedidoes\Index.cshtml" />
+    <Content Include="Views\DetallePedidoes\Create.cshtml" />
+    <Content Include="Views\DetallePedidoes\Delete.cshtml" />
+    <Content Include="Views\DetallePedidoes\Details.cshtml" />
+    <Content Include="Views\DetallePedidoes\Edit.cshtml" />
+    <Content Include="Views\DetallePedidoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

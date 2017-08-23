@@ -1,0 +1,51 @@
+﻿@model DAL_OneProEjemplo.DetallePedido
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DetallePedido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Articulo.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Articulo.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pedido.idPedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pedido.idPedido)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idDetalle }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

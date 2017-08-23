@@ -49,16 +49,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Fabricas">
-      <EntityTypeMapping TypeName="oneproejercicioModel.Fabricas">
-        <MappingFragment StoreEntitySet="Fabricas">
-          <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
-          <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="telefono" ColumnName="telefono" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Pedido">
       <EntityTypeMapping TypeName="oneproejercicioModel.Pedido">
         <MappingFragment StoreEntitySet="Pedido">
@@ -77,6 +67,16 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="version" ColumnName="version" />
           <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fabricas">
+      <EntityTypeMapping TypeName="oneproejercicioModel.Fabricas">
+        <MappingFragment StoreEntitySet="Fabricas">
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

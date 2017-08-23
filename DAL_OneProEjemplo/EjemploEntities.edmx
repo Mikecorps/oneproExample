@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="oneproejercicioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="oneproejercicioModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Articulo">
           <Key>
             <PropertyRef Name="idArticulo" />
@@ -56,7 +56,7 @@
           <Property Name="idFabrica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="descripcion" Type="varchar" MaxLength="100" />
-          <Property Name="telefono" Type="varchar" MaxLength="10" />
+          <Property Name="telefono" Type="varchar" MaxLength="20" />
         </EntityType>
         <EntityType Name="Pedido">
           <Key>
@@ -182,8 +182,7 @@
             <End Role="Pedido" EntitySet="Pedido" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="oneproejercicioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -197,8 +196,8 @@
           <Property Name="costo" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="precioUnitario" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="idFabrica" Type="Int32" />
-          <NavigationProperty Name="Fabricas" Relationship="Self.FK_Articulo_Fabricas" FromRole="Articulo" ToRole="Fabricas" />
           <NavigationProperty Name="DetallePedido" Relationship="Self.FK_DetallePedido_Articulo" FromRole="Articulo" ToRole="DetallePedido" />
+          <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_Articulo_Fabricas" FromRole="Articulo" ToRole="Fabricas" />
         </EntityType>
         <EntityType Name="Cliente">
           <Key>
@@ -238,17 +237,6 @@
           <Property Name="direccion1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Cliente" Relationship="Self.FK_Direccion_Cliente" FromRole="Direccion" ToRole="Cliente" />
         </EntityType>
-        <EntityType Name="Fabricas">
-          <Key>
-            <PropertyRef Name="idFabrica" />
-          </Key>
-          <Property Name="idFabrica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="telefono" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Articulo" Relationship="Self.FK_Articulo_Fabricas" FromRole="Fabricas" ToRole="Articulo" />
-          <NavigationProperty Name="Pedido" Relationship="Self.FK_Pedido_Fabricas" FromRole="Fabricas" ToRole="Pedido" />
-        </EntityType>
         <EntityType Name="Pedido">
           <Key>
             <PropertyRef Name="idPedido" />
@@ -259,7 +247,7 @@
           <Property Name="idFabrica" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Cliente" Relationship="Self.FK_Pedido_Cliente" FromRole="Pedido" ToRole="Cliente" />
           <NavigationProperty Name="DetallePedido" Relationship="Self.FK_DetallePedido_Pedido" FromRole="Pedido" ToRole="DetallePedido" />
-          <NavigationProperty Name="Fabricas" Relationship="Self.FK_Pedido_Fabricas" FromRole="Pedido" ToRole="Fabricas" />
+          <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_Pedido_Fabricas" FromRole="Pedido" ToRole="Fabricas" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -271,18 +259,6 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
-        <Association Name="FK_Articulo_Fabricas">
-          <End Role="Fabricas" Type="Self.Fabricas" Multiplicity="0..1" />
-          <End Role="Articulo" Type="Self.Articulo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Fabricas">
-              <PropertyRef Name="idFabrica" />
-            </Principal>
-            <Dependent Role="Articulo">
-              <PropertyRef Name="idFabrica" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_DetallePedido_Articulo">
           <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
           <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
@@ -331,30 +307,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Pedido_Fabricas">
-          <End Role="Fabricas" Type="Self.Fabricas" Multiplicity="1" />
-          <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Fabricas">
-              <PropertyRef Name="idFabrica" />
-            </Principal>
-            <Dependent Role="Pedido">
-              <PropertyRef Name="idFabrica" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="oneproejercicioEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Articulo" EntityType="Self.Articulo" />
           <EntitySet Name="Cliente" EntityType="Self.Cliente" />
           <EntitySet Name="DetallePedido" EntityType="Self.DetallePedido" />
           <EntitySet Name="Direccion" EntityType="Self.Direccion" />
-          <EntitySet Name="Fabricas" EntityType="Self.Fabricas" />
           <EntitySet Name="Pedido" EntityType="Self.Pedido" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <AssociationSet Name="FK_Articulo_Fabricas" Association="Self.FK_Articulo_Fabricas">
-            <End Role="Fabricas" EntitySet="Fabricas" />
-            <End Role="Articulo" EntitySet="Articulo" />
-          </AssociationSet>
           <AssociationSet Name="FK_DetallePedido_Articulo" Association="Self.FK_DetallePedido_Articulo">
             <End Role="Articulo" EntitySet="Articulo" />
             <End Role="DetallePedido" EntitySet="DetallePedido" />
@@ -371,11 +330,51 @@
             <End Role="Pedido" EntitySet="Pedido" />
             <End Role="DetallePedido" EntitySet="DetallePedido" />
           </AssociationSet>
-          <AssociationSet Name="FK_Pedido_Fabricas" Association="Self.FK_Pedido_Fabricas">
+          <EntitySet Name="Fabricas" EntityType="oneproejercicioModel.Fabricas" />
+          <AssociationSet Name="FK_Articulo_Fabricas" Association="oneproejercicioModel.FK_Articulo_Fabricas">
+            <End Role="Fabricas" EntitySet="Fabricas" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pedido_Fabricas" Association="oneproejercicioModel.FK_Pedido_Fabricas">
             <End Role="Fabricas" EntitySet="Fabricas" />
             <End Role="Pedido" EntitySet="Pedido" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Fabricas">
+          <Key>
+            <PropertyRef Name="idFabrica" />
+          </Key>
+          <Property Name="idFabrica" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Articulo" Relationship="oneproejercicioModel.FK_Articulo_Fabricas" FromRole="Fabricas" ToRole="Articulo" />
+          <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_Pedido_Fabricas" FromRole="Fabricas" ToRole="Pedido" />
+        </EntityType>
+        <Association Name="FK_Articulo_Fabricas">
+          <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="0..1" />
+          <End Type="oneproejercicioModel.Articulo" Role="Articulo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fabricas">
+              <PropertyRef Name="idFabrica" />
+            </Principal>
+            <Dependent Role="Articulo">
+              <PropertyRef Name="idFabrica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pedido_Fabricas">
+          <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="1" />
+          <End Type="oneproejercicioModel.Pedido" Role="Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Fabricas">
+              <PropertyRef Name="idFabrica" />
+            </Principal>
+            <Dependent Role="Pedido">
+              <PropertyRef Name="idFabrica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -430,16 +429,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Fabricas">
-            <EntityTypeMapping TypeName="oneproejercicioModel.Fabricas">
-              <MappingFragment StoreEntitySet="Fabricas">
-                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="telefono" ColumnName="telefono" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Pedido">
             <EntityTypeMapping TypeName="oneproejercicioModel.Pedido">
               <MappingFragment StoreEntitySet="Pedido">
@@ -458,6 +447,16 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fabricas">
+            <EntityTypeMapping TypeName="oneproejercicioModel.Fabricas">
+              <MappingFragment StoreEntitySet="Fabricas">
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

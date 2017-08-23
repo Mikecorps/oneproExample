@@ -51,7 +51,7 @@
     <Property Name="idFabrica" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nombre" Type="varchar" MaxLength="70" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="100" />
-    <Property Name="telefono" Type="varchar" MaxLength="10" />
+    <Property Name="telefono" Type="varchar" MaxLength="20" />
   </EntityType>
   <EntityType Name="Pedido">
     <Key>
