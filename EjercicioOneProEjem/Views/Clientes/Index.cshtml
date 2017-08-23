@@ -1,0 +1,112 @@
+﻿@model IEnumerable<DAL_OneProEjemplo.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nombre")
+
+            <!--
+            @Html.DisplayNameFor(model => model.nombre)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Apellido Paterno")
+            <!--
+            @Html.DisplayNameFor(model => model.apPaterno)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Apellido Materno")
+            <!--
+            @Html.DisplayNameFor(model => model.apMaterno)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Genero")
+            <!--
+                
+         
+            @Html.DisplayNameFor(model => model.genero)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Fecha Nacimiento")
+            <!--
+            @Html.DisplayNameFor(model => model.fechaNac)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Email")
+            <!--
+            @Html.DisplayNameFor(model => model.email)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Saldo")
+            <!--
+            @Html.DisplayNameFor(model => model.saldo)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Limite de Credito")
+            <!--
+            @Html.DisplayNameFor(model => model.limiteCre)
+                -->
+        </th>
+        <th>
+            @Html.DisplayName("Descuento")
+            <!--
+            @Html.DisplayNameFor(model => model.descuento)
+                -->
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apPaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genero)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaNac)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saldo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.limiteCre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descuento)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCliente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCliente }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCliente })
+        </td>
+    </tr>
+}
+
+</table>

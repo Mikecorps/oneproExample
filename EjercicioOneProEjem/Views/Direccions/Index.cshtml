@@ -1,0 +1,40 @@
+﻿@model IEnumerable<DAL_OneProEjemplo.Direccion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idDireccion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idDireccion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idDireccion })
+        </td>
+    </tr>
+}
+
+</table>

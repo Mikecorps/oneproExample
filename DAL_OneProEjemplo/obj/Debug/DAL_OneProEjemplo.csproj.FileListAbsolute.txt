@@ -1,0 +1,20 @@
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\bin\Debug\DAL_OneProEjemplo.dll.config
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\bin\Debug\DAL_OneProEjemplo.dll
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\bin\Debug\DAL_OneProEjemplo.pdb
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\bin\Debug\EntityFramework.dll
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\bin\Debug\EntityFramework.xml
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\obj\Debug\DAL_OneProEjemplo.csprojResolveAssemblyReference.cache
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\obj\Debug\DAL_OneProEjemplo.dll
+c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\DAL_OneProEjemplo\obj\Debug\DAL_OneProEjemplo.pdb
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\bin\Debug\DAL_OneProEjemplo.dll.config
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\bin\Debug\DAL_OneProEjemplo.dll
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\bin\Debug\DAL_OneProEjemplo.pdb
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\bin\Debug\EntityFramework.dll
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\bin\Debug\EntityFramework.xml
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\obj\Debug\DAL_OneProEjemplo.csprojResolveAssemblyReference.cache
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\obj\Debug\DAL_OneProEjemplo.dll
+C:\Users\sopor\Documents\ProyectoOnePro\DAL_OneProEjemplo\obj\Debug\DAL_OneProEjemplo.pdb
