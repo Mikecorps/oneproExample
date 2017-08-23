@@ -1,336 +1,84 @@
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\ApplicationInsights.config
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\csc.exe
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\Microsoft.CSharp.Core.targets
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\System.Collections.Immutable.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\System.Reflection.Metadata.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\vbc.exe
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe.config
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll.config
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\EjercicioOneProEjem.pdb
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Antlr3.Runtime.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\EntityFramework.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\EntityFramework.SqlServer.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.Agent.Intercept.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.PerfCounterCollector.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.Web.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Web.Infrastructure.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Newtonsoft.Json.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Owin.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Helpers.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Mvc.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Optimization.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Razor.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.WebPages.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\WebGrease.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.Web.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Helpers.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Mvc.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Optimization.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.Razor.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.WebPages.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Antlr3.Runtime.pdb
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Newtonsoft.Json.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\EntityFramework.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\EntityFramework.SqlServer.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.csprojResolveAssemblyReference.cache
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.pdb
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\DAL_OneProEjemplo.dll
-c:\users\sopor\onedrive\documentos\visual studio 2015\Projects\EjercicioOneProEjem\EjercicioOneProEjem\bin\DAL_OneProEjemplo.pdb
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\ApplicationInsights.config
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\csc.exe
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\vbc.exe
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll.config
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\EjercicioOneProEjem.pdb
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Antlr3.Runtime.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\DAL_OneProEjemplo.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.SqlServer.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.Web.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Newtonsoft.Json.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Owin.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Helpers.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Mvc.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Optimization.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Razor.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\WebGrease.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\DAL_OneProEjemplo.pdb
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.Web.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Helpers.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Mvc.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Optimization.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Razor.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Antlr3.Runtime.pdb
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Newtonsoft.Json.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.SqlServer.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.csprojResolveAssemblyReference.cache
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.dll
-C:\Users\sopor\OneDrive\Documentos\ProyectoOnePro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.pdb
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\ApplicationInsights.config
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\csc.exe
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\vbc.exe
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll.config
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\EjercicioOneProEjem.pdb
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Antlr3.Runtime.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\DAL_OneProEjemplo.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.SqlServer.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.Web.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Newtonsoft.Json.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Owin.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Helpers.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Mvc.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Optimization.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Razor.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\WebGrease.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\DAL_OneProEjemplo.pdb
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.Web.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Helpers.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Mvc.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Optimization.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.Razor.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Antlr3.Runtime.pdb
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Newtonsoft.Json.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\EntityFramework.SqlServer.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.csprojResolveAssemblyReference.cache
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.dll
-C:\Users\sopor\Documents\ProyectoOnePro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.pdb
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\ApplicationInsights.config
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\csc.exe
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\vbc.exe
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll.config
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\EjercicioOneProEjem.pdb
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Antlr3.Runtime.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\DAL_OneProEjemplo.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\EntityFramework.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\EntityFramework.SqlServer.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.Agent.Intercept.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.PerfCounterCollector.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.Web.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Newtonsoft.Json.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Owin.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Helpers.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Mvc.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Optimization.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Razor.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.WebPages.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\WebGrease.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\DAL_OneProEjemplo.pdb
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.Web.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Helpers.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Mvc.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Optimization.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.Razor.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.WebPages.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Antlr3.Runtime.pdb
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Newtonsoft.Json.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\EntityFramework.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\EntityFramework.SqlServer.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.csprojResolveAssemblyReference.cache
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.dll
-C:\Users\sopor\Documents\onepro\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.pdb
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\ApplicationInsights.config
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\csc.exe
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\vbc.exe
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll.config
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\EjercicioOneProEjem.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\EjercicioOneProEjem.pdb
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Antlr3.Runtime.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\DAL_OneProEjemplo.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\EntityFramework.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\EntityFramework.SqlServer.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.Web.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Newtonsoft.Json.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Owin.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Helpers.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Mvc.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Optimization.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Razor.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.WebPages.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\WebGrease.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\DAL_OneProEjemplo.pdb
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.Web.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.ApplicationInsights.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Helpers.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Mvc.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Optimization.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.Razor.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.WebPages.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.WebPages.Deployment.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\System.Web.WebPages.Razor.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Antlr3.Runtime.pdb
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Newtonsoft.Json.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\EntityFramework.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\EntityFramework.SqlServer.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.csprojResolveAssemblyReference.cache
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.dll
+C:\Users\sopor\Documents\GitHub\oneproExample\EjercicioOneProEjem\obj\Debug\EjercicioOneProEjem.pdb

@@ -36,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.Fabricas.nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idPedido }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.idPedido }, new { @class = "btn btn-primary btn-xs" }) |
             @Html.ActionLink("Details", "Details", new { id=item.idPedido }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idPedido })
+            @Html.ActionLink("Delete", "Delete", new { id=item.idPedido }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
 }

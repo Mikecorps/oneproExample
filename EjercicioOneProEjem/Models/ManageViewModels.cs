@@ -83,24 +83,5 @@ namespace EjercicioOneProEjem.Models
         public string SelectedProvider { get; set; }
         public ICollection<System.Web.Mvc.SelectListItem> Providers { get; set; }
     }
-    public class Cliente
-    {
-        public int idCliente { get; set; }
-        [Required(ErrorMessage = "Nombre de cliente requerido")]
-        public string nombre { get; set; }
-        [Required(ErrorMessage = "el apellido paterno es requerido")]
-        public string apPaterno { get; set; }
-        public string apMaterno { get; set; }
-        public int genero { get; set; }
-        [DataType(DataType.DateTime, ErrorMessage = "Fecha no valida")]
-        public System.DateTime fechaNac { get; set; }
-        [EmailAddress(ErrorMessage = "Email no valido ")]
-        public string email { get; set; }
-        [Required]
-        [Range(0, float.MaxValue, ErrorMessage = "Cantidad no valida")]
-        public float saldo { get; set; }
-        [Range(0,3000,ErrorMessage ="el limite de credito no debe exder los 3000")]
-        public decimal limiteCre { get; set; }
-        public decimal descuento { get; set; }
-    }
+   
 }

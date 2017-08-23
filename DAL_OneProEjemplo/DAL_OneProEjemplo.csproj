@@ -54,6 +54,7 @@
     <Compile Include="Articulo.cs">
       <DependentUpon>EjemploEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="articuloMetadata.cs" />
     <Compile Include="Cliente.cs">
       <DependentUpon>EjemploEntities.tt</DependentUpon>
     </Compile>

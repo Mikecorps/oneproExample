@@ -30,9 +30,9 @@
             @Html.DisplayFor(modelItem => item.Cliente.nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idDireccion }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.idDireccion }, new { @class = "btn btn-primary btn-xs" }) |
             @Html.ActionLink("Details", "Details", new { id=item.idDireccion }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idDireccion })
+            @Html.ActionLink("Delete", "Delete", new { id=item.idDireccion }, new { @class = "btn btn-danger btn-xs" })
         </td>
     </tr>
 }
