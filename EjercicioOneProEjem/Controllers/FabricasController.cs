@@ -105,14 +105,23 @@ namespace EjercicioOneProEjem.Controllers
         }
 
         // POST: Fabricas/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+       
         public ActionResult DeleteConfirmed(int id)
         {
-            Fabricas fabricas = db.Fabricas.Find(id);
-            db.Fabricas.Remove(fabricas);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                Fabricas fabricas = db.Fabricas.Find(id);
+
+                foreach (var articulo in db.Articulo.Where(a => a.idFabrica == id).ToList())
+                    db.Articulo.Remove(articulo);
+                db.Fabricas.Remove(fabricas);
+                db.SaveChanges();
+                return Json(new { success = true, responseText = "Se borro corectamente" }, JsonRequestBehavior.AllowGet);
+        }
+            catch {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return Json(new { succes = false });
+            }
         }
 
         protected override void Dispose(bool disposing)

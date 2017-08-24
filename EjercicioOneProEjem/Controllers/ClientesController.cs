@@ -107,14 +107,27 @@ namespace EjercicioOneProEjem.Controllers
         }
 
         // POST: Clientes/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult DeleteConfirmed(int id)
         {
-            Cliente cliente = db.Cliente.Find(id);
-            db.Cliente.Remove(cliente);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try {
+                var direcciones = db.Direccion.Where(d => d.idCliente ==id).ToList();
+                var pedidos = db.Pedido.Where(p => p.idCliente == id).ToList();
+                foreach (var direccion in direcciones)
+                    db.Direccion.Remove(direccion);
+                foreach (var pedido in pedidos)
+                    db.Pedido.Remove(pedido);
+                Cliente cliente = db.Cliente.Find(id);
+                db.Cliente.Remove(cliente);
+                db.SaveChanges();
+                return Json(new { success = true, responseText = "Se borro corectamente" }, JsonRequestBehavior.AllowGet);
+            }
+            catch {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return Json(new { succes = false });
+            }
+           
+           
         }
 
         protected override void Dispose(bool disposing)

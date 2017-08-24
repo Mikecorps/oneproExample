@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using DAL_OneProEjemplo;
 using System.Data.Entity;
+using System.Net;
 
 namespace EjercicioOneProEjem.Controllers
 {
@@ -102,8 +103,8 @@ namespace EjercicioOneProEjem.Controllers
         }
 
         // POST: Articulo/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+       
+       
         public ActionResult DeleteConfirmed(int id)
         {
             try
@@ -112,11 +113,12 @@ namespace EjercicioOneProEjem.Controllers
                 Articulo articulo = db.Articulo.Find(id);
                 db.Articulo.Remove(articulo);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Json(new { success = true, responseText = "Se borro corectamente" }, JsonRequestBehavior.AllowGet);
             }
             catch
             {
-                return View();
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return Json(new { succes = false });
             }
         }
     }
