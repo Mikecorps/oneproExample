@@ -19,8 +19,10 @@ namespace DAL_OneProEjemplo
         public string apPaterno { get; set; }
         public string apMaterno { get; set; }
         public int genero { get; set; }
-        [DataType(DataType.DateTime,ErrorMessage = "Ingrese una fecha valida: DD/MM/YYYY")]
-       
+        [Required(ErrorMessage = "Ingrese fecha de nacimiento")]
+        [Display(Name = "Fecha de Nacimiento:")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime fechaNac { get; set; }
         [EmailAddress(ErrorMessage = "Ingrese un email valido ")]
         public string email { get; set; }
