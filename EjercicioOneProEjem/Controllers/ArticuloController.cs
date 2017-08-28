@@ -44,6 +44,8 @@ namespace EjercicioOneProEjem.Controllers
             if (ModelState.IsValid)
             {
                 // TODO: Add insert logic here
+
+
                 db.Articulo.Add(articulo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
