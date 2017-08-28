@@ -109,15 +109,21 @@ namespace EjercicioOneProEjem.Controllers
             return View(direccion);
         }
 
-        // POST: Direccions/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        
         public ActionResult DeleteConfirmed(int id)
         {
-            Direccion direccion = db.Direccion.Find(id);
-            db.Direccion.Remove(direccion);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                Direccion direccion = db.Direccion.Find(id);
+                db.Direccion.Remove(direccion);
+                db.SaveChanges();
+                return Json(new { succes = true, responseText = "borrado correctamente" }, JsonRequestBehavior.AllowGet);
+            }
+            catch
+            {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return Json(new { succes = true, responseText = "Error al eliminar" });
+            }
         }
 
         protected override void Dispose(bool disposing)

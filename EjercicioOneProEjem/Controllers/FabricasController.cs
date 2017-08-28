@@ -111,7 +111,8 @@ namespace EjercicioOneProEjem.Controllers
             try
             {
                 Fabricas fabricas = db.Fabricas.Find(id);
-
+                foreach (var pedido in db.Pedido.Where(p => p.idFabrica == id))
+                    db.Pedido.Remove(pedido);
                 foreach (var articulo in db.Articulo.Where(a => a.idFabrica == id).ToList())
                     db.Articulo.Remove(articulo);
                 db.Fabricas.Remove(fabricas);
