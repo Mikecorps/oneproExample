@@ -105,8 +105,7 @@ namespace EjercicioOneProEjem.Controllers
         }
 
         // POST: distribuidors/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+       
         public ActionResult DeleteConfirmed(int id)
         {
             distribuidor distribuidor = db.distribuidor.Find(id);

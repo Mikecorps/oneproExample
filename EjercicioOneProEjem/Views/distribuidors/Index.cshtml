@@ -10,55 +10,122 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.idFabrica)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nombreDistribuidor)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.apellidoPaterno)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.apellidoMaterno)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.telefono)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.email)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.idFabrica)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombreDistribuidor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.apellidoPaterno)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.apellidoMaterno)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telefono)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.email)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idFabrica)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nombreDistribuidor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apellidoPaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apellidoMaterno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telefono)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr id="@item.id">
+                <td>
+                    @Html.DisplayFor(modelItem => item.idFabrica)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nombreDistribuidor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.apellidoPaterno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.apellidoMaterno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-primary btn-xs" }) |
+                    <button data-toggle="modal" data-target="#myModal" class="btn-delet btn btn-danger btn-xs" id="@item.id">Eliminar</button>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header alert alert-danger">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Eliminar</h4>
+            </div>
+            <div class="modal-body">
+                <p class="success-message">Desea eliminar los datos del distribuidor ? </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success delete-confirm">Ok</button>
+                <button class="btn btn-default canc" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script type="text/javascript">
+    $(document).ready(function () {
+        var id;
+        $('.btn-delet').click(function (e) {
+            id = $(this).attr('id');
+        });
+
+
+        $('.delete-confirm').click(function () {
+
+            $.ajax({
+                url: '/distribuidors/DeleteConfirmed',
+                data: {'id': id},
+                type: 'GET',
+                success: function (data) {
+                    if (data) {
+                        if ($('.modal-header').hasClass('alert-danger')) {
+                            $('.modal-header').removeClass('alert-danger').addClass('alert-success');
+                            $('.delete-confirm').css('display', 'none');
+                        }
+                        $('.success-message').html('Borrado completo');
+                        $('.canc').html('Cerrar');
+                        $('#' + id).css('display', 'none');
+                    }
+                }, error: function (err) {
+                    $('.modal-title').html('Error al eliminar');
+                     $('.modal-header').removeClass('alert-success').addClass('alert-danger');
+                    $('.delete-confirm').css('display', 'none');
+                    $('.success-message').html("Este distribuidor esta relacionado con una fabrica");
+                    $('.canc').html('Cerrar');
+                }
+            });
+        });
+        $("#myModal").on("hidden.bs.modal", function () {
+            $('.modal-title').html('Eliminar');
+            $(".modal-header").removeClass(' ').addClass('alert-danger');
+            $('.delete-confirm').css('display', 'inline-block');
+            $('.success-message').html('').html('Desea eliminar los datos del distribuidor ? ');
+            $('.canc').html('Cancelar');
+        });
+    });
+    </script>
 }
-
-</table>
