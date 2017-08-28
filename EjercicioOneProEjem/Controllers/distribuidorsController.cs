@@ -110,19 +110,21 @@ namespace EjercicioOneProEjem.Controllers
        
         public ActionResult DeleteConfirmed(int id)
         {
-            distribuidor distribuidor = db.distribuidor.Find(id);
-            db.distribuidor.Remove(distribuidor);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                distribuidor distribuidor = db.distribuidor.Find(id);
+                db.distribuidor.Remove(distribuidor);
+                db.SaveChanges();
+                return Json(new { success = true, responseText = "Se borro corectamente" }, JsonRequestBehavior.AllowGet);
+
+            }
+            catch
+            {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return Json(new { succes = false });
+            }
         }
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
         }
-    }
+    
 }
