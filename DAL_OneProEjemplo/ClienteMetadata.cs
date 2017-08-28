@@ -12,6 +12,7 @@ namespace DAL_OneProEjemplo
     public partial class ClienteMetadata
     {
         public int idCliente { get; set; }
+
         [Required(ErrorMessage = "Nombre de cliente requerido")]
         public string nombre { get; set; }
         [Required(ErrorMessage = "el apellido paterno es requerido")]

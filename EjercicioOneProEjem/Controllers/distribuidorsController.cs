@@ -38,6 +38,7 @@ namespace EjercicioOneProEjem.Controllers
         // GET: distribuidors/Create
         public ActionResult Create()
         {
+            ViewBag.idFabrica = new SelectList(db.Fabricas.ToList(), "idFabrica", "nombre");
             return View();
         }
 
