@@ -14,6 +14,7 @@ namespace DAL_OneProEjemplo
     public partial class distribuidorMetadata
     {
         public int id { get; set; }
+        [DisplayName("Fabrica")]
         public int idFabrica { get; set; }
         [Required(ErrorMessage = "Se requiere un nombre")]
         [DisplayName("Nombre")]

@@ -39,6 +39,7 @@ namespace EjercicioOneProEjem.Controllers
         public ActionResult Create()
         {
             ViewBag.idFabrica = new SelectList(db.Fabricas.ToList(), "idFabrica", "nombre");
+            
             return View();
         }
 
