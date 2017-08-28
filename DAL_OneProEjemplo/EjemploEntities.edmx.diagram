@@ -18,6 +18,9 @@
         <EntityTypeShape EntityType="oneproejercicioModel.Fabricas" Width="1.5" PointX="6.375" PointY="5.75" />
         <AssociationConnector Association="oneproejercicioModel.FK_Articulo_Fabricas" />
         <AssociationConnector Association="oneproejercicioModel.FK_Pedido_Fabricas" />
+        <EntityTypeShape EntityType="oneproejercicioModel.user" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="oneproejercicioModel.distribuidor" Width="1.5" PointX="8.375" PointY="3.75" />
+        <AssociationConnector Association="oneproejercicioModel.FK_distribuidor_Fabricas" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
