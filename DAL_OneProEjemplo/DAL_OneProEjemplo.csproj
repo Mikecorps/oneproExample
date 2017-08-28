@@ -69,6 +69,7 @@
     <Compile Include="distribuidor.cs">
       <DependentUpon>EjemploEntities.tt</DependentUpon>
     </Compile>
+    <Compile Include="distribuidorMetadata.cs" />
     <Compile Include="EjemploEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
