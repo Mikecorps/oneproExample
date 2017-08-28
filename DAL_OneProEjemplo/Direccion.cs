@@ -18,6 +18,6 @@ namespace DAL_OneProEjemplo
         public int idCliente { get; set; }
         public string direccion1 { get; set; }
     
-        public virtual Cliente Cliente { get; set; }
+        public virtual cliente Cliente { get; set; }
     }
 }

@@ -313,6 +313,7 @@
     <Content Include="Views\distribuidors\Edit.cshtml" />
     <Content Include="Views\distribuidors\Index.cshtml" />
     <Content Include="Views\Reportes\Index.cshtml" />
+    <Content Include="Views\Reportes\Entregas.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

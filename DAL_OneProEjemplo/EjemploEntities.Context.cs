@@ -28,7 +28,7 @@ namespace DAL_OneProEjemplo
         }
     
         public virtual DbSet<Articulo> Articulo { get; set; }
-        public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<cliente> Cliente { get; set; }
         public virtual DbSet<DetallePedido> DetallePedido { get; set; }
         public virtual DbSet<Direccion> Direccion { get; set; }
         public virtual DbSet<Pedido> Pedido { get; set; }
