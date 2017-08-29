@@ -27,8 +27,8 @@ namespace DAL_OneProEjemplo
         public Nullable<decimal> precioUnitario { get; set; }
         public Nullable<int> idFabrica { get; set; }
     
+        public virtual Fabricas Fabricas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetallePedido> DetallePedido { get; set; }
-        public virtual Fabricas Fabricas { get; set; }
     }
 }

@@ -25,7 +25,7 @@ namespace DAL_OneProEjemplo
         public System.DateTime fechaTime { get; set; }
         public int idFabrica { get; set; }
     
-        public virtual cliente Cliente { get; set; }
+        public virtual Cliente Cliente { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetallePedido> DetallePedido { get; set; }
         public virtual Fabricas Fabricas { get; set; }

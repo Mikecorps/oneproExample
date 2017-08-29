@@ -12,10 +12,10 @@ namespace DAL_OneProEjemplo
     using System;
     using System.Collections.Generic;
     
-    public partial class cliente
+    public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public cliente()
+        public Cliente()
         {
             this.Direccion = new HashSet<Direccion>();
             this.Pedido = new HashSet<Pedido>();

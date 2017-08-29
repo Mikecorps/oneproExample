@@ -27,7 +27,7 @@ namespace EjercicioOneProEjem.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            cliente cliente = db.Cliente.Find(id);
+            Cliente cliente = db.Cliente.Find(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -48,7 +48,7 @@ namespace EjercicioOneProEjem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idCliente,nombre,apPaterno,apMaterno,genero,fechaNac,email,saldo,limiteCre,descuento")] cliente cliente)
+        public ActionResult Create([Bind(Include = "idCliente,nombre,apPaterno,apMaterno,genero,fechaNac,email,saldo,limiteCre,descuento")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -67,7 +67,7 @@ namespace EjercicioOneProEjem.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            cliente cliente = db.Cliente.Find(id);
+            Cliente cliente = db.Cliente.Find(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -80,7 +80,7 @@ namespace EjercicioOneProEjem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "idCliente,nombre,apPaterno,apMaterno,genero,fechaNac,email,saldo,limiteCre,descuento")] cliente cliente)
+        public ActionResult Edit([Bind(Include = "idCliente,nombre,apPaterno,apMaterno,genero,fechaNac,email,saldo,limiteCre,descuento")] Cliente cliente)
         {
             if (ModelState.IsValid)
             {
@@ -98,7 +98,7 @@ namespace EjercicioOneProEjem.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            cliente cliente = db.Cliente.Find(id);
+            Cliente cliente = db.Cliente.Find(id);
             if (cliente == null)
             {
                 return HttpNotFound();
@@ -117,7 +117,7 @@ namespace EjercicioOneProEjem.Controllers
                     db.Direccion.Remove(direccion);
                 foreach (var pedido in pedidos)
                     db.Pedido.Remove(pedido);
-                cliente cliente = db.Cliente.Find(id);
+                Cliente cliente = db.Cliente.Find(id);
                 db.Cliente.Remove(cliente);
                 db.SaveChanges();
                 return Json(new { success = true, responseText = "Se borro corectamente" }, JsonRequestBehavior.AllowGet);

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 namespace DAL_OneProEjemplo
 {
     [MetadataType(typeof(ClienteMetadata))]
-    public partial class cliente { }
+    public partial class Cliente { }
     public partial class ClienteMetadata
     {
         public int idCliente { get; set; }
