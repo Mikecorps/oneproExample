@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using EjercicioOneProEjem.Models;
+using DAL_OneProEjemplo;
 
 namespace EjercicioOneProEjem.Controllers
 {
@@ -16,6 +17,7 @@ namespace EjercicioOneProEjem.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private oneproejercicioEntities db = new oneproejercicioEntities();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
