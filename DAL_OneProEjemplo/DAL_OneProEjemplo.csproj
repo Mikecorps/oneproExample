@@ -85,6 +85,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EjemploEntities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="EntregasReport.cs" />
     <Compile Include="FabricaMetadata.cs" />
     <Compile Include="Fabricas.cs">
       <DependentUpon>EjemploEntities.tt</DependentUpon>

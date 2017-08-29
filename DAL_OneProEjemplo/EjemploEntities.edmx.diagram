@@ -5,22 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="26014686822641c998379cfa86cfab43" Name="Diagram1">
-        <EntityTypeShape EntityType="oneproejercicioModel.Articulo" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="oneproejercicioModel.Cliente" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="oneproejercicioModel.DetallePedido" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="oneproejercicioModel.Direccion" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
-        <EntityTypeShape EntityType="oneproejercicioModel.Pedido" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="oneproejercicioModel.sysdiagrams" Width="1.5" PointX="6.375" PointY="3.5" IsExpanded="true" />
-        <AssociationConnector Association="oneproejercicioModel.FK_DetallePedido_Articulo" ManuallyRouted="false" />
-        <AssociationConnector Association="oneproejercicioModel.FK_Direccion_Cliente" ManuallyRouted="false" />
-        <AssociationConnector Association="oneproejercicioModel.FK_Pedido_Cliente" ManuallyRouted="false" />
-        <AssociationConnector Association="oneproejercicioModel.FK_DetallePedido_Pedido" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="oneproejercicioModel.Fabricas" Width="1.5" PointX="6.375" PointY="5.75" />
+        <EntityTypeShape EntityType="oneproejercicioModel.Articulo" Width="1.5" PointX="3" PointY="9.25" />
+        <EntityTypeShape EntityType="oneproejercicioModel.Cliente" Width="1.5" PointX="0.75" PointY="1.875" />
+        <EntityTypeShape EntityType="oneproejercicioModel.DetallePedido" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="oneproejercicioModel.Direccion" Width="1.5" PointX="3" PointY="5.75" />
+        <EntityTypeShape EntityType="oneproejercicioModel.distribuidor" Width="1.5" PointX="5.75" PointY="5.75" />
+        <EntityTypeShape EntityType="oneproejercicioModel.Fabricas" Width="1.5" PointX="0.75" PointY="7.375" />
+        <EntityTypeShape EntityType="oneproejercicioModel.Pedido" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="oneproejercicioModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="oneproejercicioModel.user" Width="1.5" PointX="7.75" PointY="3.75" />
         <AssociationConnector Association="oneproejercicioModel.FK_Articulo_Fabricas" />
+        <AssociationConnector Association="oneproejercicioModel.FK_DetallePedido_Articulo" />
+        <AssociationConnector Association="oneproejercicioModel.FK_Direccion_Cliente" />
+        <AssociationConnector Association="oneproejercicioModel.FK_Pedido_Cliente" />
+        <AssociationConnector Association="oneproejercicioModel.FK_DetallePedido_Pedido" />
         <AssociationConnector Association="oneproejercicioModel.FK_Pedido_Fabricas" />
-        <EntityTypeShape EntityType="oneproejercicioModel.user" Width="1.5" PointX="7.375" PointY="0.75" />
-        <EntityTypeShape EntityType="oneproejercicioModel.distribuidor" Width="1.5" PointX="8.375" PointY="3.75" />
-        <AssociationConnector Association="oneproejercicioModel.FK_distribuidor_Fabricas" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

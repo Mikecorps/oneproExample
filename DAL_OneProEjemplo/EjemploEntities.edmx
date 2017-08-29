@@ -145,18 +145,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_distribuidor_Fabricas">
-          <End Role="Fabricas" Type="Self.Fabricas" Multiplicity="1" />
-          <End Role="distribuidor" Type="Self.distribuidor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Fabricas">
-              <PropertyRef Name="idFabrica" />
-            </Principal>
-            <Dependent Role="distribuidor">
-              <PropertyRef Name="idFabrica" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Pedido_Cliente">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
@@ -238,10 +226,6 @@
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Direccion" EntitySet="Direccion" />
           </AssociationSet>
-          <AssociationSet Name="FK_distribuidor_Fabricas" Association="Self.FK_distribuidor_Fabricas">
-            <End Role="Fabricas" EntitySet="Fabricas" />
-            <End Role="distribuidor" EntitySet="distribuidor" />
-          </AssociationSet>
           <AssociationSet Name="FK_Pedido_Cliente" Association="Self.FK_Pedido_Cliente">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Pedido" EntitySet="Pedido" />
@@ -255,161 +239,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="oneproejercicioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="Articulo">
-          <Key>
-            <PropertyRef Name="idArticulo" />
-          </Key>
-          <Property Name="idArticulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="existencia" Type="Int32" Nullable="false" />
-          <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="costo" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="precioUnitario" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="idFabrica" Type="Int32" />
-          <NavigationProperty Name="DetallePedido" Relationship="Self.FK_DetallePedido_Articulo" FromRole="Articulo" ToRole="DetallePedido" />
-          <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_Articulo_Fabricas" FromRole="Articulo" ToRole="Fabricas" />
-        </EntityType>
-        <EntityType Name="Cliente">
-          <Key>
-            <PropertyRef Name="idCliente" />
-          </Key>
-          <Property Name="idCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="apPaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="apMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="genero" Type="Int32" />
-          <Property Name="fechaNac" Type="DateTime" Precision="0" />
-          <Property Name="email" Type="String" MaxLength="70" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="saldo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="limiteCre" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="descuento" Type="Double" />
-          <NavigationProperty Name="Direccion" Relationship="Self.FK_Direccion_Cliente" FromRole="Cliente" ToRole="Direccion" />
-          <NavigationProperty Name="Pedido" Relationship="Self.FK_Pedido_Cliente" FromRole="Cliente" ToRole="Pedido" />
-        </EntityType>
-        <EntityType Name="DetallePedido">
-          <Key>
-            <PropertyRef Name="idDetalle" />
-          </Key>
-          <Property Name="idDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idPedido" Type="Int32" Nullable="false" />
-          <Property Name="idArticulo" Type="Int32" Nullable="false" />
-          <Property Name="cantidad" Type="Double" />
-          <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
-          <NavigationProperty Name="Articulo" Relationship="Self.FK_DetallePedido_Articulo" FromRole="DetallePedido" ToRole="Articulo" />
-          <NavigationProperty Name="Pedido" Relationship="Self.FK_DetallePedido_Pedido" FromRole="DetallePedido" ToRole="Pedido" />
-        </EntityType>
-        <EntityType Name="Direccion">
-          <Key>
-            <PropertyRef Name="idDireccion" />
-          </Key>
-          <Property Name="idDireccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idCliente" Type="Int32" Nullable="false" />
-          <Property Name="direccion1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK_Direccion_Cliente" FromRole="Direccion" ToRole="Cliente" />
-        </EntityType>
-        <EntityType Name="Pedido">
-          <Key>
-            <PropertyRef Name="idPedido" />
-          </Key>
-          <Property Name="idPedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="idCliente" Type="Int32" />
-          <Property Name="fechaTime" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="idFabrica" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Cliente" Relationship="Self.FK_Pedido_Cliente" FromRole="Pedido" ToRole="Cliente" />
-          <NavigationProperty Name="DetallePedido" Relationship="Self.FK_DetallePedido_Pedido" FromRole="Pedido" ToRole="DetallePedido" />
-          <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_Pedido_Fabricas" FromRole="Pedido" ToRole="Fabricas" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
-        <Association Name="FK_DetallePedido_Articulo">
-          <End Role="Articulo" Type="Self.Articulo" Multiplicity="1" />
-          <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Articulo">
-              <PropertyRef Name="idArticulo" />
-            </Principal>
-            <Dependent Role="DetallePedido">
-              <PropertyRef Name="idArticulo" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Direccion_Cliente">
-          <End Role="Cliente" Type="Self.Cliente" Multiplicity="1" />
-          <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Cliente">
-              <PropertyRef Name="idCliente" />
-            </Principal>
-            <Dependent Role="Direccion">
-              <PropertyRef Name="idCliente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Pedido_Cliente">
-          <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
-          <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Cliente">
-              <PropertyRef Name="idCliente" />
-            </Principal>
-            <Dependent Role="Pedido">
-              <PropertyRef Name="idCliente" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_DetallePedido_Pedido">
-          <End Role="Pedido" Type="Self.Pedido" Multiplicity="1" />
-          <End Role="DetallePedido" Type="Self.DetallePedido" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pedido">
-              <PropertyRef Name="idPedido" />
-            </Principal>
-            <Dependent Role="DetallePedido">
-              <PropertyRef Name="idPedido" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="oneproejercicioEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Articulo" EntityType="Self.Articulo" />
-          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
-          <EntitySet Name="DetallePedido" EntityType="Self.DetallePedido" />
-          <EntitySet Name="Direccion" EntityType="Self.Direccion" />
-          <EntitySet Name="Pedido" EntityType="Self.Pedido" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-          <AssociationSet Name="FK_DetallePedido_Articulo" Association="Self.FK_DetallePedido_Articulo">
-            <End Role="Articulo" EntitySet="Articulo" />
-            <End Role="DetallePedido" EntitySet="DetallePedido" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Direccion_Cliente" Association="Self.FK_Direccion_Cliente">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="Direccion" EntitySet="Direccion" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pedido_Cliente" Association="Self.FK_Pedido_Cliente">
-            <End Role="Cliente" EntitySet="Cliente" />
-            <End Role="Pedido" EntitySet="Pedido" />
-          </AssociationSet>
-          <AssociationSet Name="FK_DetallePedido_Pedido" Association="Self.FK_DetallePedido_Pedido">
-            <End Role="Pedido" EntitySet="Pedido" />
-            <End Role="DetallePedido" EntitySet="DetallePedido" />
-          </AssociationSet>
-          <EntitySet Name="Fabricas" EntityType="oneproejercicioModel.Fabricas" />
-          <AssociationSet Name="FK_Articulo_Fabricas" Association="oneproejercicioModel.FK_Articulo_Fabricas">
-            <End Role="Fabricas" EntitySet="Fabricas" />
-            <End Role="Articulo" EntitySet="Articulo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pedido_Fabricas" Association="oneproejercicioModel.FK_Pedido_Fabricas">
-            <End Role="Fabricas" EntitySet="Fabricas" />
-            <End Role="Pedido" EntitySet="Pedido" />
-          </AssociationSet>
-          <EntitySet Name="user" EntityType="oneproejercicioModel.user" />
-          <EntitySet Name="distribuidor" EntityType="oneproejercicioModel.distribuidor" />
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -440,11 +270,114 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
-          <AssociationSet Name="FK_distribuidor_Fabricas" Association="oneproejercicioModel.FK_distribuidor_Fabricas">
+          <EntitySet Name="Articulo" EntityType="oneproejercicioModel.Articulo" />
+          <EntitySet Name="Cliente" EntityType="oneproejercicioModel.Cliente" />
+          <EntitySet Name="DetallePedido" EntityType="oneproejercicioModel.DetallePedido" />
+          <EntitySet Name="Direccion" EntityType="oneproejercicioModel.Direccion" />
+          <EntitySet Name="distribuidor" EntityType="oneproejercicioModel.distribuidor" />
+          <EntitySet Name="Fabricas" EntityType="oneproejercicioModel.Fabricas" />
+          <EntitySet Name="Pedido" EntityType="oneproejercicioModel.Pedido" />
+          <EntitySet Name="sysdiagrams" EntityType="oneproejercicioModel.sysdiagrams" />
+          <EntitySet Name="user" EntityType="oneproejercicioModel.user" />
+          <AssociationSet Name="FK_Articulo_Fabricas" Association="oneproejercicioModel.FK_Articulo_Fabricas">
             <End Role="Fabricas" EntitySet="Fabricas" />
-            <End Role="distribuidor" EntitySet="distribuidor" />
+            <End Role="Articulo" EntitySet="Articulo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetallePedido_Articulo" Association="oneproejercicioModel.FK_DetallePedido_Articulo">
+            <End Role="Articulo" EntitySet="Articulo" />
+            <End Role="DetallePedido" EntitySet="DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Direccion_Cliente" Association="oneproejercicioModel.FK_Direccion_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Direccion" EntitySet="Direccion" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pedido_Cliente" Association="oneproejercicioModel.FK_Pedido_Cliente">
+            <End Role="Cliente" EntitySet="Cliente" />
+            <End Role="Pedido" EntitySet="Pedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DetallePedido_Pedido" Association="oneproejercicioModel.FK_DetallePedido_Pedido">
+            <End Role="Pedido" EntitySet="Pedido" />
+            <End Role="DetallePedido" EntitySet="DetallePedido" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pedido_Fabricas" Association="oneproejercicioModel.FK_Pedido_Fabricas">
+            <End Role="Fabricas" EntitySet="Fabricas" />
+            <End Role="Pedido" EntitySet="Pedido" />
           </AssociationSet>
         </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Articulo">
+          <Key>
+            <PropertyRef Name="idArticulo" />
+          </Key>
+          <Property Name="idArticulo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="existencia" Type="Int32" Nullable="false" />
+          <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="costo" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="precioUnitario" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="idFabrica" Type="Int32" />
+          <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_Articulo_Fabricas" FromRole="Articulo" ToRole="Fabricas" />
+          <NavigationProperty Name="DetallePedido" Relationship="oneproejercicioModel.FK_DetallePedido_Articulo" FromRole="Articulo" ToRole="DetallePedido" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="idCliente" />
+          </Key>
+          <Property Name="idCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="apPaterno" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="apMaterno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="genero" Type="Int32" />
+          <Property Name="fechaNac" Type="DateTime" Precision="0" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="saldo" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="limiteCre" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="descuento" Type="Double" />
+          <NavigationProperty Name="Direccion" Relationship="oneproejercicioModel.FK_Direccion_Cliente" FromRole="Cliente" ToRole="Direccion" />
+          <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_Pedido_Cliente" FromRole="Cliente" ToRole="Pedido" />
+        </EntityType>
+        <EntityType Name="DetallePedido">
+          <Key>
+            <PropertyRef Name="idDetalle" />
+          </Key>
+          <Property Name="idDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idPedido" Type="Int32" Nullable="false" />
+          <Property Name="idArticulo" Type="Int32" Nullable="false" />
+          <Property Name="cantidad" Type="Double" />
+          <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Articulo" Relationship="oneproejercicioModel.FK_DetallePedido_Articulo" FromRole="DetallePedido" ToRole="Articulo" />
+          <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_DetallePedido_Pedido" FromRole="DetallePedido" ToRole="Pedido" />
+        </EntityType>
+        <EntityType Name="Direccion">
+          <Key>
+            <PropertyRef Name="idDireccion" />
+          </Key>
+          <Property Name="idDireccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCliente" Type="Int32" Nullable="false" />
+          <Property Name="direccion1" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Cliente" Relationship="oneproejercicioModel.FK_Direccion_Cliente" FromRole="Direccion" ToRole="Cliente" />
+        </EntityType>
+        <EntityType Name="distribuidor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="idFabrica" Type="Int32" Nullable="false" />
+          <Property Name="nombreDistribuidor" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="apellidoPaterno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="apellidoMaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
         <EntityType Name="Fabricas">
           <Key>
             <PropertyRef Name="idFabrica" />
@@ -455,7 +388,36 @@
           <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Articulo" Relationship="oneproejercicioModel.FK_Articulo_Fabricas" FromRole="Fabricas" ToRole="Articulo" />
           <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_Pedido_Fabricas" FromRole="Fabricas" ToRole="Pedido" />
-          <NavigationProperty Name="distribuidor" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="Fabricas" ToRole="distribuidor" />
+        </EntityType>
+        <EntityType Name="Pedido">
+          <Key>
+            <PropertyRef Name="idPedido" />
+          </Key>
+          <Property Name="idPedido" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idCliente" Type="Int32" />
+          <Property Name="fechaTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="idFabrica" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cliente" Relationship="oneproejercicioModel.FK_Pedido_Cliente" FromRole="Pedido" ToRole="Cliente" />
+          <NavigationProperty Name="DetallePedido" Relationship="oneproejercicioModel.FK_DetallePedido_Pedido" FromRole="Pedido" ToRole="DetallePedido" />
+          <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_Pedido_Fabricas" FromRole="Pedido" ToRole="Fabricas" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="iduser" />
+          </Key>
+          <Property Name="iduser" Type="Int32" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Articulo_Fabricas">
           <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="0..1" />
@@ -466,6 +428,54 @@
             </Principal>
             <Dependent Role="Articulo">
               <PropertyRef Name="idFabrica" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetallePedido_Articulo">
+          <End Type="oneproejercicioModel.Articulo" Role="Articulo" Multiplicity="1" />
+          <End Type="oneproejercicioModel.DetallePedido" Role="DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Articulo">
+              <PropertyRef Name="idArticulo" />
+            </Principal>
+            <Dependent Role="DetallePedido">
+              <PropertyRef Name="idArticulo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Direccion_Cliente">
+          <End Type="oneproejercicioModel.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="oneproejercicioModel.Direccion" Role="Direccion" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="idCliente" />
+            </Principal>
+            <Dependent Role="Direccion">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pedido_Cliente">
+          <End Type="oneproejercicioModel.Cliente" Role="Cliente" Multiplicity="0..1" />
+          <End Type="oneproejercicioModel.Pedido" Role="Pedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="idCliente" />
+            </Principal>
+            <Dependent Role="Pedido">
+              <PropertyRef Name="idCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DetallePedido_Pedido">
+          <End Type="oneproejercicioModel.Pedido" Role="Pedido" Multiplicity="1" />
+          <End Type="oneproejercicioModel.DetallePedido" Role="DetallePedido" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pedido">
+              <PropertyRef Name="idPedido" />
+            </Principal>
+            <Dependent Role="DetallePedido">
+              <PropertyRef Name="idPedido" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -481,157 +491,12 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="user">
-          <Key>
-            <PropertyRef Name="iduser" />
-          </Key>
-          <Property Name="iduser" Type="Int32" Nullable="false" />
-          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="distribuidor">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
-          <Property Name="idFabrica" Type="Int32" Nullable="false" />
-          <Property Name="nombreDistribuidor" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="apellidoPaterno" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="apellidoMaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="distribuidor" ToRole="Fabricas" />
-        </EntityType>
-        <ComplexType Name="sp_helpdiagramdefinition_Result">
-          <Property Type="Int32" Name="version" Nullable="true" />
-          <Property Type="Binary" Name="definition" Nullable="true" />
-        </ComplexType>
-        <ComplexType Name="sp_helpdiagrams_Result">
-          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-          <Property Type="Int32" Name="ID" Nullable="false" />
-          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-          <Property Type="Int32" Name="OwnerID" Nullable="false" />
-        </ComplexType>
-        <Association Name="FK_distribuidor_Fabricas">
-          <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="1" />
-          <End Type="oneproejercicioModel.distribuidor" Role="distribuidor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Fabricas">
-              <PropertyRef Name="idFabrica" />
-            </Principal>
-            <Dependent Role="distribuidor">
-              <PropertyRef Name="idFabrica" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="oneproejercicioModelStoreContainer" CdmEntityContainer="oneproejercicioEntities">
-          <EntitySetMapping Name="Articulo">
-            <EntityTypeMapping TypeName="oneproejercicioModel.Articulo">
-              <MappingFragment StoreEntitySet="Articulo">
-                <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
-                <ScalarProperty Name="existencia" ColumnName="existencia" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="costo" ColumnName="costo" />
-                <ScalarProperty Name="precioUnitario" ColumnName="precioUnitario" />
-                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Cliente">
-            <EntityTypeMapping TypeName="oneproejercicioModel.Cliente">
-              <MappingFragment StoreEntitySet="Cliente">
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
-                <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
-                <ScalarProperty Name="genero" ColumnName="genero" />
-                <ScalarProperty Name="fechaNac" ColumnName="fechaNac" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="saldo" ColumnName="saldo" />
-                <ScalarProperty Name="limiteCre" ColumnName="limiteCre" />
-                <ScalarProperty Name="descuento" ColumnName="descuento" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DetallePedido">
-            <EntityTypeMapping TypeName="oneproejercicioModel.DetallePedido">
-              <MappingFragment StoreEntitySet="DetallePedido">
-                <ScalarProperty Name="idDetalle" ColumnName="idDetalle" />
-                <ScalarProperty Name="idPedido" ColumnName="idPedido" />
-                <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
-                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
-                <ScalarProperty Name="total" ColumnName="total" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Direccion">
-            <EntityTypeMapping TypeName="oneproejercicioModel.Direccion">
-              <MappingFragment StoreEntitySet="Direccion">
-                <ScalarProperty Name="idDireccion" ColumnName="idDireccion" />
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-                <ScalarProperty Name="direccion1" ColumnName="direccion" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Pedido">
-            <EntityTypeMapping TypeName="oneproejercicioModel.Pedido">
-              <MappingFragment StoreEntitySet="Pedido">
-                <ScalarProperty Name="idPedido" ColumnName="idPedido" />
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
-                <ScalarProperty Name="fechaTime" ColumnName="fechaTime" />
-                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="oneproejercicioModel.sysdiagrams">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Fabricas">
-            <EntityTypeMapping TypeName="oneproejercicioModel.Fabricas">
-              <MappingFragment StoreEntitySet="Fabricas">
-                <ScalarProperty Name="telefono" ColumnName="telefono" />
-                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="nombre" ColumnName="nombre" />
-                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="user">
-            <EntityTypeMapping TypeName="oneproejercicioModel.user">
-              <MappingFragment StoreEntitySet="user">
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="iduser" ColumnName="iduser" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="distribuidor">
-            <EntityTypeMapping TypeName="oneproejercicioModel.distribuidor">
-              <MappingFragment StoreEntitySet="distribuidor">
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="telefono" ColumnName="telefono" />
-                <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
-                <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
-                <ScalarProperty Name="nombreDistribuidor" ColumnName="nombreDistribuidor" />
-                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="oneproejercicioModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="oneproejercicioModel.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="oneproejercicioModel.Store.sp_dropdiagram" />
@@ -656,6 +521,107 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="oneproejercicioModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="oneproejercicioModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Articulo">
+            <EntityTypeMapping TypeName="oneproejercicioModel.Articulo">
+              <MappingFragment StoreEntitySet="Articulo">
+                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
+                <ScalarProperty Name="precioUnitario" ColumnName="precioUnitario" />
+                <ScalarProperty Name="costo" ColumnName="costo" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="existencia" ColumnName="existencia" />
+                <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="oneproejercicioModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="descuento" ColumnName="descuento" />
+                <ScalarProperty Name="limiteCre" ColumnName="limiteCre" />
+                <ScalarProperty Name="saldo" ColumnName="saldo" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="fechaNac" ColumnName="fechaNac" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+                <ScalarProperty Name="apMaterno" ColumnName="apMaterno" />
+                <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetallePedido">
+            <EntityTypeMapping TypeName="oneproejercicioModel.DetallePedido">
+              <MappingFragment StoreEntitySet="DetallePedido">
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+                <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+                <ScalarProperty Name="idDetalle" ColumnName="idDetalle" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Direccion">
+            <EntityTypeMapping TypeName="oneproejercicioModel.Direccion">
+              <MappingFragment StoreEntitySet="Direccion">
+                <ScalarProperty Name="direccion1" ColumnName="direccion" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="idDireccion" ColumnName="idDireccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="distribuidor">
+            <EntityTypeMapping TypeName="oneproejercicioModel.distribuidor">
+              <MappingFragment StoreEntitySet="distribuidor">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="apellidoMaterno" ColumnName="apellidoMaterno" />
+                <ScalarProperty Name="apellidoPaterno" ColumnName="apellidoPaterno" />
+                <ScalarProperty Name="nombreDistribuidor" ColumnName="nombreDistribuidor" />
+                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fabricas">
+            <EntityTypeMapping TypeName="oneproejercicioModel.Fabricas">
+              <MappingFragment StoreEntitySet="Fabricas">
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pedido">
+            <EntityTypeMapping TypeName="oneproejercicioModel.Pedido">
+              <MappingFragment StoreEntitySet="Pedido">
+                <ScalarProperty Name="idFabrica" ColumnName="idFabrica" />
+                <ScalarProperty Name="fechaTime" ColumnName="fechaTime" />
+                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+                <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="oneproejercicioModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="oneproejercicioModel.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="iduser" ColumnName="iduser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
