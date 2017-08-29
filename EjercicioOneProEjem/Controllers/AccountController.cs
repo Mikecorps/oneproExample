@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using EjercicioOneProEjem.Models;
+using DAL_OneProEjemplo;
 
 namespace EjercicioOneProEjem.Controllers
 {
