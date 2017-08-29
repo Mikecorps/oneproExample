@@ -27,9 +27,9 @@ namespace DAL_OneProEjemplo
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<DetallePedido> DetallePedido { get; set; }
         public virtual DbSet<Articulo> Articulo { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
+        public virtual DbSet<DetallePedido> DetallePedido { get; set; }
         public virtual DbSet<Direccion> Direccion { get; set; }
         public virtual DbSet<distribuidor> distribuidor { get; set; }
         public virtual DbSet<Fabricas> Fabricas { get; set; }

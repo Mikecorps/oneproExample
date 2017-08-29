@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="oneproejercicioModelStoreContainer" CdmEntityContainer="oneproejercicioEntities">
+<<<<<<< HEAD
     <EntitySetMapping Name="DetallePedido">
       <EntityTypeMapping TypeName="oneproejercicioModel.DetallePedido">
         <MappingFragment StoreEntitySet="DetallePedido">
@@ -12,6 +13,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
     <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="oneproejercicioModel.Store.sp_alterdiagram" />
     <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="oneproejercicioModel.Store.sp_creatediagram" />
     <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="oneproejercicioModel.Store.sp_dropdiagram" />
@@ -61,6 +64,20 @@
           <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+<<<<<<< HEAD
+=======
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetallePedido">
+      <EntityTypeMapping TypeName="oneproejercicioModel.DetallePedido">
+        <MappingFragment StoreEntitySet="DetallePedido">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+          <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+          <ScalarProperty Name="idDetalle" ColumnName="idDetalle" />
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

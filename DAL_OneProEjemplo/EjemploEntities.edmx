@@ -145,18 +145,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_distribuidor_Fabricas">
-          <End Role="Fabricas" Type="Self.Fabricas" Multiplicity="1" />
-          <End Role="distribuidor" Type="Self.distribuidor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Fabricas">
-              <PropertyRef Name="idFabrica" />
-            </Principal>
-            <Dependent Role="distribuidor">
-              <PropertyRef Name="idFabrica" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Pedido_Cliente">
           <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
           <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
@@ -238,10 +226,6 @@
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Direccion" EntitySet="Direccion" />
           </AssociationSet>
-          <AssociationSet Name="FK_distribuidor_Fabricas" Association="Self.FK_distribuidor_Fabricas">
-            <End Role="Fabricas" EntitySet="Fabricas" />
-            <End Role="distribuidor" EntitySet="distribuidor" />
-          </AssociationSet>
           <AssociationSet Name="FK_Pedido_Cliente" Association="Self.FK_Pedido_Cliente">
             <End Role="Cliente" EntitySet="Cliente" />
             <End Role="Pedido" EntitySet="Pedido" />
@@ -255,6 +239,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="oneproejercicioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<<<<<<< HEAD
         <EntityType Name="DetallePedido">
           <Key>
             <PropertyRef Name="idDetalle" />
@@ -269,6 +254,9 @@
         </EntityType>
         <EntityContainer Name="oneproejercicioEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DetallePedido" EntityType="Self.DetallePedido" />
+=======
+        <EntityContainer Name="oneproejercicioEntities" annotation:LazyLoadingEnabled="true">
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
           <FunctionImport Name="sp_alterdiagram">
             <Parameter Name="diagramname" Mode="In" Type="String" />
             <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -301,6 +289,10 @@
           <FunctionImport Name="sp_upgraddiagrams" />
           <EntitySet Name="Articulo" EntityType="oneproejercicioModel.Articulo" />
           <EntitySet Name="Cliente" EntityType="oneproejercicioModel.Cliente" />
+<<<<<<< HEAD
+=======
+          <EntitySet Name="DetallePedido" EntityType="oneproejercicioModel.DetallePedido" />
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
           <EntitySet Name="Direccion" EntityType="oneproejercicioModel.Direccion" />
           <EntitySet Name="distribuidor" EntityType="oneproejercicioModel.distribuidor" />
           <EntitySet Name="Fabricas" EntityType="oneproejercicioModel.Fabricas" />
@@ -327,10 +319,13 @@
             <End Role="Pedido" EntitySet="Pedido" />
             <End Role="DetallePedido" EntitySet="DetallePedido" />
           </AssociationSet>
+<<<<<<< HEAD
           <AssociationSet Name="FK_distribuidor_Fabricas" Association="oneproejercicioModel.FK_distribuidor_Fabricas">
             <End Role="Fabricas" EntitySet="Fabricas" />
             <End Role="distribuidor" EntitySet="distribuidor" />
           </AssociationSet>
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
           <AssociationSet Name="FK_Pedido_Fabricas" Association="oneproejercicioModel.FK_Pedido_Fabricas">
             <End Role="Fabricas" EntitySet="Fabricas" />
             <End Role="Pedido" EntitySet="Pedido" />
@@ -376,6 +371,21 @@
           <Property Name="descuento" Type="Double" />
           <NavigationProperty Name="Direccion" Relationship="oneproejercicioModel.FK_Direccion_Cliente" FromRole="Cliente" ToRole="Direccion" />
           <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_Pedido_Cliente" FromRole="Cliente" ToRole="Pedido" />
+<<<<<<< HEAD
+=======
+        </EntityType>
+        <EntityType Name="DetallePedido">
+          <Key>
+            <PropertyRef Name="idDetalle" />
+          </Key>
+          <Property Name="idDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idPedido" Type="Int32" Nullable="false" />
+          <Property Name="idArticulo" Type="Int32" Nullable="false" />
+          <Property Name="cantidad" Type="Double" />
+          <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+          <NavigationProperty Name="Articulo" Relationship="oneproejercicioModel.FK_DetallePedido_Articulo" FromRole="DetallePedido" ToRole="Articulo" />
+          <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_DetallePedido_Pedido" FromRole="DetallePedido" ToRole="Pedido" />
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
         </EntityType>
         <EntityType Name="Direccion">
           <Key>
@@ -397,7 +407,10 @@
           <Property Name="apellidoMaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
           <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="distribuidor" ToRole="Fabricas" />
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
         </EntityType>
         <EntityType Name="Fabricas">
           <Key>
@@ -408,7 +421,10 @@
           <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Articulo" Relationship="oneproejercicioModel.FK_Articulo_Fabricas" FromRole="Fabricas" ToRole="Articulo" />
+<<<<<<< HEAD
           <NavigationProperty Name="distribuidor" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="Fabricas" ToRole="distribuidor" />
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
           <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_Pedido_Fabricas" FromRole="Fabricas" ToRole="Pedido" />
         </EntityType>
         <EntityType Name="Pedido">
@@ -501,6 +517,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+<<<<<<< HEAD
         <Association Name="FK_distribuidor_Fabricas">
           <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="1" />
           <End Type="oneproejercicioModel.distribuidor" Role="distribuidor" Multiplicity="*" />
@@ -513,6 +530,8 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
         <Association Name="FK_Pedido_Fabricas">
           <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="1" />
           <End Type="oneproejercicioModel.Pedido" Role="Pedido" Multiplicity="*" />
@@ -531,6 +550,7 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="oneproejercicioModelStoreContainer" CdmEntityContainer="oneproejercicioEntities">
+<<<<<<< HEAD
           <EntitySetMapping Name="DetallePedido">
             <EntityTypeMapping TypeName="oneproejercicioModel.DetallePedido">
               <MappingFragment StoreEntitySet="DetallePedido">
@@ -542,6 +562,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
           <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="oneproejercicioModel.Store.sp_alterdiagram" />
           <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="oneproejercicioModel.Store.sp_creatediagram" />
           <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="oneproejercicioModel.Store.sp_dropdiagram" />
@@ -591,6 +613,20 @@
                 <ScalarProperty Name="apPaterno" ColumnName="apPaterno" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+<<<<<<< HEAD
+=======
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetallePedido">
+            <EntityTypeMapping TypeName="oneproejercicioModel.DetallePedido">
+              <MappingFragment StoreEntitySet="DetallePedido">
+                <ScalarProperty Name="total" ColumnName="total" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+                <ScalarProperty Name="idPedido" ColumnName="idPedido" />
+                <ScalarProperty Name="idDetalle" ColumnName="idDetalle" />
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

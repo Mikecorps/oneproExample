@@ -21,7 +21,5 @@ namespace DAL_OneProEjemplo
         public string apellidoMaterno { get; set; }
         public string telefono { get; set; }
         public string email { get; set; }
-    
-        public virtual Fabricas Fabricas { get; set; }
     }
 }

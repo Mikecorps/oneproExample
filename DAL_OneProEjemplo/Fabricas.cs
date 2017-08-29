@@ -18,7 +18,6 @@ namespace DAL_OneProEjemplo
         public Fabricas()
         {
             this.Articulo = new HashSet<Articulo>();
-            this.distribuidor = new HashSet<distribuidor>();
             this.Pedido = new HashSet<Pedido>();
         }
     
@@ -29,8 +28,6 @@ namespace DAL_OneProEjemplo
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Articulo> Articulo { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<distribuidor> distribuidor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedido> Pedido { get; set; }
     }
