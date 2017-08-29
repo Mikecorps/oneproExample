@@ -20,10 +20,11 @@ namespace EjercicioOneProEjem.Controllers
         {
             var entregas = from pedido in db.Pedido
                            join detalle in db.DetallePedido on pedido.idPedido equals detalle.idPedido
-                           select new {name = pedido.Cliente, direccion = pedido.Cliente.Direccion,cantidad=detalle.cantidad,
+                           join cliente in  db.Cliente on  pedido.idCliente equals cliente.idCliente
+                           select new {name = cliente.nombre, direccion = cliente.Direccion,cantidad=detalle.cantidad,
                                descripcion=detalle.Articulo.descripcion, fabrica=pedido.Fabricas.nombre };
-            ViewBag.data = entregas;
-            return View(entregas);
+            ViewBag.entregas = entregas.ToList();
+            return View();
         }
     }
 }

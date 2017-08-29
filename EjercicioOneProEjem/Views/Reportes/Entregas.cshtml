@@ -1,16 +1,24 @@
-﻿@model ViewDataInfo
-@{
-    ViewBag.Title = "Entregas";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿
+    @{
+        ViewBag.Title = "Entregas";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 
-<h2>Entregas</h2>
-<table class="table table-bordered">
-    <thead class="modal-header">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.nombre);
-            </th>
-        </tr>
-    </thead>
-</table>
+    <h2>Entregas</h2>
+    <table class="table table-bordered">
+        <thead class="modal-header">
+            <tr>
+                <th>
+                    Cliente
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.entregas)
+            {
+                <tr>
+                    <td>@item.nombre</td>
+                </tr>
+            }
+        </tbody>
+    </table>

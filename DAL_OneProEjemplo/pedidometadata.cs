@@ -8,7 +8,10 @@ using System.Threading.Tasks;
 namespace DAL_OneProEjemplo
 {
     [MetadataType(typeof(pedidoMetadata))]
-    public partial class pedido { }
+    public partial class pedido
+    {
+        public static object Cliente { get; set; }
+    }
 
     public partial class pedidoMetadata
     {

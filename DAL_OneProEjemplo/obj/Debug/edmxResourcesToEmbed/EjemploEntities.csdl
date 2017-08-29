@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="oneproejercicioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
   <EntityType Name="DetallePedido">
     <Key>
       <PropertyRef Name="idDetalle" />
@@ -14,6 +18,12 @@
   </EntityType>
   <EntityContainer Name="oneproejercicioEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="DetallePedido" EntityType="Self.DetallePedido" />
+<<<<<<< HEAD
+=======
+=======
+  <EntityContainer Name="oneproejercicioEntities" annotation:LazyLoadingEnabled="true">
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
     <FunctionImport Name="sp_alterdiagram">
       <Parameter Name="diagramname" Mode="In" Type="String" />
       <Parameter Name="owner_id" Mode="In" Type="Int32" />
@@ -46,6 +56,13 @@
     <FunctionImport Name="sp_upgraddiagrams" />
     <EntitySet Name="Articulo" EntityType="oneproejercicioModel.Articulo" />
     <EntitySet Name="Cliente" EntityType="oneproejercicioModel.Cliente" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+    <EntitySet Name="DetallePedido" EntityType="oneproejercicioModel.DetallePedido" />
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
     <EntitySet Name="Direccion" EntityType="oneproejercicioModel.Direccion" />
     <EntitySet Name="distribuidor" EntityType="oneproejercicioModel.distribuidor" />
     <EntitySet Name="Fabricas" EntityType="oneproejercicioModel.Fabricas" />
@@ -72,10 +89,19 @@
       <End Role="Pedido" EntitySet="Pedido" />
       <End Role="DetallePedido" EntitySet="DetallePedido" />
     </AssociationSet>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
     <AssociationSet Name="FK_distribuidor_Fabricas" Association="oneproejercicioModel.FK_distribuidor_Fabricas">
       <End Role="Fabricas" EntitySet="Fabricas" />
       <End Role="distribuidor" EntitySet="distribuidor" />
     </AssociationSet>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
     <AssociationSet Name="FK_Pedido_Fabricas" Association="oneproejercicioModel.FK_Pedido_Fabricas">
       <End Role="Fabricas" EntitySet="Fabricas" />
       <End Role="Pedido" EntitySet="Pedido" />
@@ -121,6 +147,24 @@
     <Property Name="descuento" Type="Double" />
     <NavigationProperty Name="Direccion" Relationship="oneproejercicioModel.FK_Direccion_Cliente" FromRole="Cliente" ToRole="Direccion" />
     <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_Pedido_Cliente" FromRole="Cliente" ToRole="Pedido" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  </EntityType>
+  <EntityType Name="DetallePedido">
+    <Key>
+      <PropertyRef Name="idDetalle" />
+    </Key>
+    <Property Name="idDetalle" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idPedido" Type="Int32" Nullable="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <Property Name="cantidad" Type="Double" />
+    <Property Name="total" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Articulo" Relationship="oneproejercicioModel.FK_DetallePedido_Articulo" FromRole="DetallePedido" ToRole="Articulo" />
+    <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_DetallePedido_Pedido" FromRole="DetallePedido" ToRole="Pedido" />
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
   </EntityType>
   <EntityType Name="Direccion">
     <Key>
@@ -142,7 +186,14 @@
     <Property Name="apellidoMaterno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+<<<<<<< HEAD
     <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="distribuidor" ToRole="Fabricas" />
+=======
+<<<<<<< HEAD
+    <NavigationProperty Name="Fabricas" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="distribuidor" ToRole="Fabricas" />
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
   </EntityType>
   <EntityType Name="Fabricas">
     <Key>
@@ -153,7 +204,14 @@
     <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="telefono" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="Articulo" Relationship="oneproejercicioModel.FK_Articulo_Fabricas" FromRole="Fabricas" ToRole="Articulo" />
+<<<<<<< HEAD
     <NavigationProperty Name="distribuidor" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="Fabricas" ToRole="distribuidor" />
+=======
+<<<<<<< HEAD
+    <NavigationProperty Name="distribuidor" Relationship="oneproejercicioModel.FK_distribuidor_Fabricas" FromRole="Fabricas" ToRole="distribuidor" />
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
     <NavigationProperty Name="Pedido" Relationship="oneproejercicioModel.FK_Pedido_Fabricas" FromRole="Fabricas" ToRole="Pedido" />
   </EntityType>
   <EntityType Name="Pedido">
@@ -246,6 +304,10 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2f1487b859d1aebb99f95ec0ecb00a7c6cf61bcd
   <Association Name="FK_distribuidor_Fabricas">
     <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="1" />
     <End Type="oneproejercicioModel.distribuidor" Role="distribuidor" Multiplicity="*" />
@@ -258,6 +320,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+=======
+>>>>>>> 5d5b61457c4a086c389f038c08de32908d5ce49a
   <Association Name="FK_Pedido_Fabricas">
     <End Type="oneproejercicioModel.Fabricas" Role="Fabricas" Multiplicity="1" />
     <End Type="oneproejercicioModel.Pedido" Role="Pedido" Multiplicity="*" />

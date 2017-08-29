@@ -140,18 +140,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_distribuidor_Fabricas">
-    <End Role="Fabricas" Type="Self.Fabricas" Multiplicity="1" />
-    <End Role="distribuidor" Type="Self.distribuidor" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Fabricas">
-        <PropertyRef Name="idFabrica" />
-      </Principal>
-      <Dependent Role="distribuidor">
-        <PropertyRef Name="idFabrica" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Pedido_Cliente">
     <End Role="Cliente" Type="Self.Cliente" Multiplicity="0..1" />
     <End Role="Pedido" Type="Self.Pedido" Multiplicity="*" />
@@ -232,10 +220,6 @@
     <AssociationSet Name="FK_Direccion_Cliente" Association="Self.FK_Direccion_Cliente">
       <End Role="Cliente" EntitySet="Cliente" />
       <End Role="Direccion" EntitySet="Direccion" />
-    </AssociationSet>
-    <AssociationSet Name="FK_distribuidor_Fabricas" Association="Self.FK_distribuidor_Fabricas">
-      <End Role="Fabricas" EntitySet="Fabricas" />
-      <End Role="distribuidor" EntitySet="distribuidor" />
     </AssociationSet>
     <AssociationSet Name="FK_Pedido_Cliente" Association="Self.FK_Pedido_Cliente">
       <End Role="Cliente" EntitySet="Cliente" />

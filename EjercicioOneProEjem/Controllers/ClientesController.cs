@@ -32,8 +32,8 @@ namespace EjercicioOneProEjem.Controllers
             {
                 return HttpNotFound();
             }
-            
-            
+
+
             return View(cliente);
         }
 
@@ -48,7 +48,7 @@ namespace EjercicioOneProEjem.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "idCliente,nombre,apPaterno,apMaterno,genero,fechaNac,email,saldo,limiteCre,descuento")] Cliente cliente)
+        public ActionResult Create([Bind(Include = "idCliente,nombre,apPaterno,apMaterno,genero,fechaNac,email,saldo,limiteCre,descuento")]  Cliente cliente)
         {
             if (ModelState.IsValid)
             {

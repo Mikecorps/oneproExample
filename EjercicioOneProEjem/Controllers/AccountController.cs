@@ -17,6 +17,7 @@ namespace EjercicioOneProEjem.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private oneproejercicioEntities db = new oneproejercicioEntities();
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
