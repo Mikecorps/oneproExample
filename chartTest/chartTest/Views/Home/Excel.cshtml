@@ -1,0 +1,138 @@
+﻿@{
+    ViewBag.Title = "Datos de Excel";
+}
+<h2>Excel</h2>
+<div class="container-fluid" ng-app="excelApp" ng-controller="DataSet">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#data">Datos</a></li>
+        <li><a data-toggle="tab" href="#chart">Graficas</a></li>
+        <li><button id="browse" class="btn btn-info">Buscar</button></li>
+        
+    </ul>
+
+
+    <div class="tab-content" >
+        <div class="tab-pane fade in active" id="data">
+            <input id="file" type="file" accept=".xlsx" fileread style="visibility:hidden" />
+            <div class="col-sm-12">
+                <h4><small>RECENT POSTS</small></h4>
+                <div class="panel panel-default">
+                    <div id="table">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="chart" class="tab-pane fade" style="display:flex">
+            <div class="col-lg-2 sidenav" style="margin-top:6pt">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Add Chart</button>
+               
+
+            </div>
+           
+            <div class="panel panel-default col-lg-12">
+                <div id="rotate" class="panel-body"><div id="myDiv"></div></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Añadir Trace</h4>
+                    <form>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="RadioType" value="1">Series
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" ng-model="RadioType" value="2">X y Y
+                        </label>
+                    </form>
+                </div>
+                <div class="modal-body">
+                    <label>Lista de Variables</label>
+                    <select class="form-control" ng-model="variable" ng-change="addTrace()" ng-options="column for column in columns">
+                    </select>
+                    <table class="table table-bordered table-striped table-highlight">
+                        <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Tipo</th>
+                                <th>Eje</th>
+                                <th>Size</th>
+                                <th>Color</th>
+                                <th>Eliminar</th>  
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="TraceData in TracesData">
+                           <tr>
+                               <td class="col-md-2">{{TraceData.variable}}</td>
+                               <td class="col-md-2"><select class="form-control" ng-model="TraceData.tipo" data-live-search="true">
+                                   <option ng-repeat="type in types" value="{{type.value}}">{{type.name}}</option>
+                                   </select>
+                               </td>
+                               <td class="col-md-1">Eje x</td>
+                               <td class="col-md-2"><input class="form-control" type="number" ng-model="TraceData.size" /></td>
+                               <td class="col-md-2"><input id="colorPick" type="color" ng-model="TraceData.color" /></td>
+                               <td class="col-md-1"><button ng-click="deleteTrace(TraceData)" class="btn btn-sm btn-danger">x</button></td>
+                           </tr>
+                        </tbody>
+                      <!--  <tbody>
+                           <tr>
+                               <td rowspan="2">Grafica1</td>
+                               <td rowspan="2">tipo</td>
+                               <td>eje</td>
+                               <td rowspan="2">size</td>
+                               <td rowspan="2">color</td>
+                               <td rowspan="2">eliminar</td>
+                           </tr>
+                           <tr>
+                               <td>eje</td>
+                               
+                              
+                           </tr> 
+                            <tr> <td> <p style="display:none"> </p></td> </tr>
+                            <tr>
+                                <td rowspan="2">Grafica2</td>
+                                <td rowspan="2">tipo</td>
+                                <td>eje</td>
+                                <td rowspan="2">size</td>
+                                <td rowspan="2">color</td>
+                                <td rowspan="2">eliminar</td>
+                            </tr>
+                            <tr>
+                                <td>eje</td>
+                              
+                                
+                            </tr>
+                        </tbody>-->
+                    </table>                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" ng-click="plott()" data-dismiss="modal">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/jquery-ui.js"></script>
+    <script src="~/Scripts/xlsx.full.min.js"></script>
+    <script src="~/Scripts/ExcelReader.js"></script>
+   <script type="text/javascript">
+       
+       $(document).ready(function () {
+           $("#browse").click(function () {
+               $("#file").click();
+           });
+          
+           
+       });
+    </script>
+
+    }
+
