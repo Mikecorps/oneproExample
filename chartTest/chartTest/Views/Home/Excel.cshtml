@@ -51,64 +51,82 @@
                         </label>
                     </form>
                 </div>
-                <div class="modal-body">
-                    <label>Lista de Variables</label>
-                    <select class="form-control" ng-model="variable" ng-change="addTrace()" ng-options="column for column in columns">
-                    </select>
-                    <table class="table table-bordered table-striped table-highlight">
-                        <thead>
-                            <tr>
-                                <th>Variable</th>
-                                <th>Tipo</th>
-                                <th>Eje</th>
-                                <th>Size</th>
-                                <th>Color</th>
-                                <th>Eliminar</th>  
-                            </tr>
-                        </thead>
-                        <tbody ng-repeat="TraceData in TracesData">
-                           <tr>
-                               <td class="col-md-2">{{TraceData.variable}}</td>
-                               <td class="col-md-2"><select class="form-control" ng-model="TraceData.tipo" data-live-search="true">
-                                   <option ng-repeat="type in types" value="{{type.value}}">{{type.name}}</option>
-                                   </select>
-                               </td>
-                               <td class="col-md-1">Eje x</td>
-                               <td class="col-md-2"><input class="form-control" type="number" ng-model="TraceData.size" /></td>
-                               <td class="col-md-2"><input id="colorPick" type="color" ng-model="TraceData.color" /></td>
-                               <td class="col-md-1"><button ng-click="deleteTrace(TraceData)" class="btn btn-sm btn-danger">x</button></td>
-                           </tr>
-                        </tbody>
-                      <!--  <tbody>
-                           <tr>
-                               <td rowspan="2">Grafica1</td>
-                               <td rowspan="2">tipo</td>
-                               <td>eje</td>
-                               <td rowspan="2">size</td>
-                               <td rowspan="2">color</td>
-                               <td rowspan="2">eliminar</td>
-                           </tr>
-                           <tr>
-                               <td>eje</td>
-                               
-                              
-                           </tr> 
-                            <tr> <td> <p style="display:none"> </p></td> </tr>
-                            <tr>
-                                <td rowspan="2">Grafica2</td>
-                                <td rowspan="2">tipo</td>
-                                <td>eje</td>
-                                <td rowspan="2">size</td>
-                                <td rowspan="2">color</td>
-                                <td rowspan="2">eliminar</td>
-                            </tr>
-                            <tr>
-                                <td>eje</td>
-                              
-                                
-                            </tr>
-                        </tbody>-->
-                    </table>                
+                <div class="modal-body" ng-switch="RadioType">
+                    <div ng-switch-when="1">
+                        <label>Lista de Variables</label>
+                        <select class="form-control" ng-model="variable" ng-change="addTrace()" ng-options="column for column in columns"></select>
+                        <table class="table table-bordered table-striped table-highlight">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Tipo</th>
+                                    <th>Eje</th>
+                                    <th>Size</th>
+                                    <th>Color</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="TraceData in TracesData">
+                                <tr>
+                                    <td class="col-md-2">{{TraceData.variable}}</td>
+                                    <td class="col-md-2">
+                                        <select class="form-control" ng-model="TraceData.tipo" data-live-search="true">
+                                            <option ng-repeat="type in types" value="{{type.value}}">{{type.name}}</option>
+                                        </select>
+                                    </td>
+                                    <td class="col-md-1">Y1</td>
+                                    <td class="col-md-2"><input class="form-control" type="number" ng-model="TraceData.size" /></td>
+                                    <td class="col-md-2"><input id="colorPick" type="color" ng-model="TraceData.color" /></td>
+                                    <td class="col-md-1"><button ng-click="deleteTrace(TraceData)" class="btn btn-sm btn-danger">x</button></td>
+                                </tr>
+                            </tbody>
+                           
+                        </table>
+                    </div>
+                    <div ng-switch-when="2">
+                        <table class="table table-bordered table-striped table-highlight">
+                            <thead>
+                                <tr>
+                                    <th>Variable</th>
+                                    <th>Tipo</th>
+                                    <th>Eje</th>
+                                    <th>Size</th>
+                                    <th>Color</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">Grafica1</td>
+                                    <td rowspan="2">tipo</td>
+                                    <td><select class="form-control" title="Eje X"> </select></td>
+                                    <td rowspan="2">size</td>
+                                    <td rowspan="2">color</td>
+                                    <td rowspan="2">eliminar</td>
+                                </tr>
+                                <tr>
+                                    <td><select class="form-control" title="Eje Y"></select></td>
+                                </tr>
+
+                                <tr> <td> <p style="display:none"> </p></td> </tr>
+
+
+                                <tr>
+                                    <td rowspan="2">Grafica2</td>
+                                    <td rowspan="2">tipo</td>
+                                    <td><select class="form-control"></select></td>
+                                    <td rowspan="2">size</td>
+                                    <td rowspan="2">color</td>
+                                    <td rowspan="2">eliminar</td>
+                                </tr>
+                                <tr>
+                                    <td><select class="form-control"></select></td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-info" ng-click="plott()" data-dismiss="modal">Aceptar</button>

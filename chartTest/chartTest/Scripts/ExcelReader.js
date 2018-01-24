@@ -113,7 +113,7 @@ module.controller('DataSet', function ($scope, $rootScope) {
                 marker: {
                     color: val.color,
                     size: val.size,
-                    opacity:0.8
+                    opacity:0.7
                 }
             }
             if ($scope.axis > 1)
@@ -134,7 +134,10 @@ module.controller('DataSet', function ($scope, $rootScope) {
             $scope.traces.push(trace);
             $scope.axis += 1
         });
-        Plotly.newPlot('myDiv', $scope.traces, $scope.layout);
+        Plotly.newPlot('myDiv', $scope.traces, $scope.layout, {
+            modeBarButtonsToRemove: ['sendDataToCloud', 'lasso2d', 'hoverCompareCartesian'],
+            displaylogo: false
+        });
         
     }
     $scope.plottXY = function () {
@@ -156,11 +159,7 @@ module.controller('DataSet', function ($scope, $rootScope) {
                 gridcolor: "#bdbdbd",
                 linecolor: "#636363",
                 linewidth: 6,
-                rangeslider: {
-                    visible: true,
-                    
-                    
-                }
+               
 
             },
             yaxis: {
@@ -169,10 +168,9 @@ module.controller('DataSet', function ($scope, $rootScope) {
                 mirror: "ticks",
                 gridcolor: "#bdbdbd",
                 linecolor: "#636363",
-                linewidth: 6,
-               
-               
-            }
+                linewidth: 6,   
+            },
+            
 
         }
         if ($scope.RadioType == "1")
