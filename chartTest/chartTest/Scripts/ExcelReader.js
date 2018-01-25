@@ -149,6 +149,8 @@ module.controller('DataSet', function ($scope, $rootScope) {
             angular.forEach($scope.data, function (value, key2) {
                 $scope.yAx.push(value[val.ejeY]);
             });
+
+
         });
 
     }
