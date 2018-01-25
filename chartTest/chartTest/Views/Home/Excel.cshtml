@@ -42,7 +42,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Añadir Trace</h4>
-                    <form>
+                    <form class="form-control">
                         <label class="radio-inline">
                             <input type="radio" ng-model="RadioType" value="1">Series
                         </label>
@@ -80,7 +80,6 @@
                                     <td class="col-md-1"><button ng-click="deleteTrace(TraceData)" class="btn btn-sm btn-danger">x</button></td>
                                 </tr>
                             </tbody>
-                           
                         </table>
                     </div>
                     <div ng-switch-when="2">
@@ -103,7 +102,7 @@
                                         <option ng-repeat="type in types" value="{{type.value}}">{{type.name}}</option>
                                                 </select>
                                     </td>
-                                    <td style="display:inline-flex">
+                                    <td>
                                         <div class="col-xs-6">
                                             <span class="label label-info">Eje X</span>
                                             <select class="form-control" ng-model="TraceData.ejeX" ng-options="column for column in columns"></select>
@@ -118,6 +117,15 @@
                                     <td class="col-md-1"><button ng-click="deleteTrace(TraceData)" class="btn btn-sm btn-danger">x</button></td>
                                 </tr>
                                 
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button ng-click="addTrace()" class="btn btn-info btn-sm">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

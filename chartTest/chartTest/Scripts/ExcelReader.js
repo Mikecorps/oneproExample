@@ -31,7 +31,6 @@ module.directive('fileread', function ($rootScope) {
 module.controller('DataSet', function ($scope, $rootScope) {
     $scope.RadioType;
     $scope.data = [];
-    $scope.xAxis = [];
     $scope.variable;
     $scope.TracesData = [];
     $scope.types = [
@@ -93,19 +92,19 @@ module.controller('DataSet', function ($scope, $rootScope) {
     }
     
     $scope.plottSerie = function () {
-        
+        var xAxis = [];
+        var yAx = [];
         var y = 'yaxis';
         angular.forEach($scope.TracesData, function (val, key) { 
-            var yAx = [];
             angular.forEach($scope.data, function (value, key2) {
                 yAx.push(value[val.variable]);
-                if ($scope.xAxis.indexOf(key2) === -1) {
-                    $scope.xAxis.push(key2);
+                if (xAxis.indexOf(key2) === -1) {
+                    xAxis.push(key2);
                 }
             });
            
             var trace = {
-                x: $scope.xAxis,
+                x: xAxis,
                 y: yAx,
                 name: val.variable,
                 type: 'scatter',
@@ -141,8 +140,17 @@ module.controller('DataSet', function ($scope, $rootScope) {
         
     }
     $scope.plottXY = function () {
-        var yAx;
-        var xAx;
+        var yAx = [];
+        var xAx = [];
+        angular.forEach($scope.TracesData, function (val, key) {
+            angular.forEach($scope.data, function (value, key2) {
+                $scope.yAx.push(value[val.ejeX]);
+            });
+            angular.forEach($scope.data, function (value, key2) {
+                $scope.yAx.push(value[val.ejeY]);
+            });
+        });
+
     }
     $scope.plott = function ()
     {
